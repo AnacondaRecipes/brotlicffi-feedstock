@@ -1,13 +1,13 @@
 {% set name = "brotlicffi" %}
-{% set version = "1.2.0.0" %}
+{% set version = "1.2.0.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 34345d8d1f9d534fcac2249e57a4c3c8801a33c9942ff9f8574f67a175e17adb
+  sha256: c20d5c596278307ad06414a6d95a892377ea274a5c6b790c2548c009385d621c
 
 build:
   number: 0
@@ -23,11 +23,11 @@ requirements:
     - pip
     - python
     - setuptools
-    - cffi >=1.0.0 # [py<313]
-    - cffi >=1.17.0 # [py>=313]
+    - cffi >=1.0.0  # [py<313]
+    - cffi >=1.17.0  # [py>=313]
   run:
-    - cffi >=1.0.0 # [py<313]
-    - cffi >=1.17.0 # [py>=313]
+    - cffi >=1.0.0  # [py<313]
+    - cffi >=1.17.0  # [py>=313]
     - python
 
 test:
